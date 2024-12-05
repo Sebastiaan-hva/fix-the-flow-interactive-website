@@ -12,14 +12,15 @@ h2{
 
 main{
     display:grid;
-    grid-template-columns: 1fr 50px 1fr;
+    gap:0em;
+    grid-template-columns: 50px 1fr 1fr;
     grid-template-rows:1fr;
     aside{
-        grid-column-start:2;
+        grid-column-start:1;
         grid-row-start:1;
     }
     ol:nth-of-type(1){
-        grid-column-start:1;
+        grid-column-start:2;
     }
     ol:nth-of-type(2){
         grid-column-start:3;
@@ -35,7 +36,7 @@ main{
 aside {
     display: flex; 
     flex-direction: column;
-    gap: 3rem;
+    gap: 4.65rem;
     position: relative;
 
 }
@@ -46,7 +47,7 @@ aside > time::after {
     display: block;
     position: absolute;
     rotate: 90deg;
-    margin-top: .8rem;
+    margin-top: 1.2rem;
     margin-left: -.4rem;
     color: #292929;
 }
@@ -118,13 +119,15 @@ article{
 
 .programma-button{
     font-size:1em;
+    margin-top:5em;
+    margin-bottom:1em;
 }
 
 .audio-player {
     width: 304px;
     margin: 20px;
     position: relative;
-    background: #004958;
+    background: #11436b;
     border-radius: 45px;
     border: none;
     cursor: pointer;
@@ -146,5 +149,5 @@ article{
  }
 
 footer{
-
+    position:sticky;
 }
