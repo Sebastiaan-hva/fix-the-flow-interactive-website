@@ -12,15 +12,18 @@ $(document).ready(function () {
     });
 });
 
-const audio = document.querySelector("audio");
+document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("audio-player");
+    const playPauseButton = document.getElementById("play-pause-button");
 
-const playButton = document.getElementById("play-button");
-const pauseButton = document.getElementById("pause-button");
-
-playButton.addEventListener("click", () => {
-    audio.play();
-});
-
-pauseButton.addEventListener("click", () => {
-    audio.pause();
+    playPauseButton.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            audio.controls = false; // Hide controlls
+            playPauseButton.textContent = "Pause"; // Update button text
+        } else {
+            audio.pause();
+            playPauseButton.textContent = "Play Me"; // Revert button text
+        }
+    });
 });
