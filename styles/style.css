@@ -133,10 +133,20 @@ article{
     cursor: pointer;
 }
 
-.audio-player:active .text {
-    transform: translateY(-.2em);
+.audio-player:hover{
+color:aliceblue;
+background-color: rgb(42, 53, 204);
 }
 
+
+
+#play-pause-button:hover{
+    transform: translateY(-12px);
+}
+
+#play-pause-button:active{
+    transform: translateY(-8px);
+}
 
 
 #play-pause-button{
@@ -150,13 +160,10 @@ article{
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--slam-primary);
-    transform: translateY(-12px);
+    transform: translateY(-14px);
     transition: transform ease 0.12s;
 }
 
-audio {
-    /* display: none; Initially hide the audio element */
-}
 
 footer {
     position: sticky;
