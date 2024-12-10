@@ -124,7 +124,7 @@ article{
 }
 
 .audio-player {
-    width: 304px;
+    width:20em;
     margin: 20px;
     position: relative;
     background: #11436b;
@@ -132,10 +132,16 @@ article{
     border: none;
     cursor: pointer;
 }
+
 .audio-player:active .text {
     transform: translateY(-.2em);
-  }
+}
 
+
+
+#play-pause-button{
+    width:20rem;
+}
 .text {
     display: block;
     padding: 20px 25px;
@@ -143,11 +149,15 @@ article{
     background: var(--brand-primary);
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--brand-secondary);
+    color: var(--slam-primary);
     transform: translateY(-12px);
     transition: transform ease 0.12s;
- }
+}
 
-footer{
-    position:sticky;
+audio {
+    /* display: none; Initially hide the audio element */
+}
+
+footer {
+    position: sticky;
 }

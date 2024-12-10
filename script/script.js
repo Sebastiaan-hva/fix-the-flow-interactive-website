@@ -1,14 +1,18 @@
-$(document).ready(function () {
-    $("#showContent").click(function () {
-        $("#hideContent").show();
-        $("#showContent").hide();
-        $("#hiddenId").show();
+document.addEventListener("DOMContentLoaded", () => {
+    const showButton = document.getElementById("showContent");
+    const hideButton = document.getElementById("hideContent");
+    const hiddenContent = document.getElementById("hiddenId");
+
+    showButton.addEventListener("click", () => {
+        hideButton.style.display = "inline-block";
+        showButton.style.display = "none";
+        hiddenContent.style.display = "block";
     });
 
-    $("#hideContent").click(function () {
-        $("#showContent").show();
-        $("#hideContent").hide();
-        $("#hiddenId").hide();
+    hideButton.addEventListener("click", () => {
+        showButton.style.display = "inline-block";
+        hideButton.style.display = "none";
+        hiddenContent.style.display = "none";
     });
 });
 
