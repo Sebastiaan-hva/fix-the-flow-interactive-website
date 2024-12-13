@@ -1,37 +1,34 @@
-// functie gebruikt jquery daar staat die $ voor.
 
-// functie om het programma te tonen
+document.addEventListener("DOMContentLoaded", () => {
+    const showButton = document.getElementById("showContent");
+    const hideButton = document.getElementById("hideContent");
+    const hiddenContent = document.getElementById("hiddenId");
 
-$(document).ready(function () {
-    $("#showContent").click(function () {
-        $("#hideContent").show();
-        $("#showContent").hide();
-        $("#hiddenId").show();
+    showButton.addEventListener("click", () => {
+        hideButton.style.display = "inline-block";
+        showButton.style.display = "none";
+        hiddenContent.style.display = "block";
     });
 
-// functie om het programma te verstoppen
-
-    $("#hideContent").click(function () {
-        $("#showContent").show();
-        $("#hideContent").hide();
-        $("#hiddenId").hide();
+    hideButton.addEventListener("click", () => {
+        showButton.style.display = "inline-block";
+        hideButton.style.display = "none";
+        hiddenContent.style.display = "none";
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("audio-player");
+    const playPauseButton = document.getElementById("play-pause-button");
 
-// functie gedefineerd
-const audio = document.querySelector("audio");
-
-// play & pause button
-const playButton = document.getElementById("play-button");
-const pauseButton = document.getElementById("pause-button");
-
-// event listener voor click event om audio te starten
-playButton.addEventListener("click", () => {
-    audio.play();
-});
-
-// event listener voor click event om audio te stoppen
-pauseButton.addEventListener("click", () => {
-    audio.pause();
+    playPauseButton.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            audio.controls = false; // Hide controlls
+            playPauseButton.textContent = "Pause"; // Update button text
+        } else {
+            audio.pause();
+            playPauseButton.textContent = "Play Me"; // Revert button text
+        }
+    });
 });

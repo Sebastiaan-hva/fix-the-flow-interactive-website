@@ -124,7 +124,7 @@ article{
 }
 
 .audio-player {
-    width: 304px;
+    width:20em;
     margin: 20px;
     position: relative;
     background: #11436b;
@@ -132,10 +132,26 @@ article{
     border: none;
     cursor: pointer;
 }
-.audio-player:active .text {
-    transform: translateY(-.2em);
-  }
 
+.audio-player:hover{
+color:aliceblue;
+background-color: rgb(42, 53, 204);
+}
+
+
+
+#play-pause-button:hover{
+    transform: translateY(-12px);
+}
+
+#play-pause-button:active{
+    transform: translateY(-8px);
+}
+
+
+#play-pause-button{
+    width:20rem;
+}
 .text {
     display: block;
     padding: 20px 25px;
@@ -143,11 +159,12 @@ article{
     background: var(--brand-primary);
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--brand-secondary);
-    transform: translateY(-12px);
+    color: var(--slam-primary);
+    transform: translateY(-14px);
     transition: transform ease 0.12s;
- }
+}
 
-footer{
-    position:sticky;
+
+footer {
+    position: sticky;
 }

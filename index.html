@@ -6,7 +6,6 @@
     <title>Radio Veronica Programma</title>
     <link rel="stylesheet" href="https://vsheo.github.io/look-and-feel-styleguide/mediahuis.css">
     <link rel="stylesheet" href="./styles/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./script/script.js" defer></script>
 </head>
 
@@ -172,8 +171,8 @@
 <footer>
     <section class="veronica-primary">
         <div class="audio-player">
-            <span class="text" class="veronica-secondary">Play Me</span>
-            <audio controls>
+            <button id="play-pause-button" class="text veronica-secondary">Play Me</button>
+            <audio id="audio-player">
                 <source src="./assets/would that make you love me.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
