@@ -141,11 +141,11 @@ background-color: rgb(42, 53, 204);
 
 
 #play-pause-button:hover{
-    transform: translateY(-12px);
+    transform: translateY(-4px);
 }
 
 #play-pause-button:active{
-    transform: translateY(-8px);
+    transform: translateY(-1px);
 }
 
 
@@ -155,12 +155,12 @@ background-color: rgb(42, 53, 204);
 .text {
     display: block;
     padding: 20px 25px;
-    border-radius: 15px;
-    background: var(--brand-primary);
+    border-radius: 45px;
+    background: blue;
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--slam-primary);
-    transform: translateY(-14px);
+    color: black;
+    transform: translateY(-10px);
     transition: transform ease 0.12s;
 }
 
