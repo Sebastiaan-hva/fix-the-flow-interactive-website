@@ -2,46 +2,130 @@
     box-sizing: border-box; 
     margin: 0; 
     padding: 0; 
+    list-style-type: none;
 }
 
+/* Grid container for main  */
+main {
+    display: grid;
+    gap: 0em;
+    grid-template-columns: 500px 20px 35% 35%; /* Define columns */
+    grid-template-rows: 100px 80px 80px 1fr 200px;   /* Define rows */
+    grid-template-areas:
+        "nav-main nav-main nav-main nav-main"
+        "nav-programma nav-programma . ."
+        "nav-dag . . ."
+        "section aside ol ol"
+        "footer footer footer footer"                     ;
+}
 
-h2{ 
+/* Make nav-main span  entire row */
+nav {
+    grid-column: 1 / -1;
+    grid-row: 1;        
+}
+
+ul.nav-main {
+    background-color: #0091FF;
+    display: flex;
+    justify-content: space-around;
+    height:100px;
+    font-size:2em;
+    li{
+        margin-top:30px;
+        font-weight:bolder;
+        color:white;
+    }
+    img{
+        scale:0.6;
+    }
+
+}
+/* Positioning for ul.nav-programma */
+ul.nav-programma {
+    grid-column: 2 / 4; 
+    grid-row: 2;         
+    display: flex;
+    justify-content: space-between;
+    margin-top:1.5em;
+    width:130%; /* van de container dus de column width gefefineerd in de grid */
     text-transform: uppercase;
-    font-size: var(--font-size-xl);
+    font-weight:700;
+    font-size:1.3em;
+    color:grey;
+    
+    border-bottom: 1px solid #888;
 }
 
-main{
-    display:grid;
-    gap:0em;
-    grid-template-columns: 50px 1fr 1fr;
-    grid-template-rows:1fr;
-    aside{
-        grid-column-start:1;
-        grid-row-start:1;
+/* Positioning for ul.nav-dag */
+ul.nav-dag {
+    grid-column: 3;     
+    grid-row: 3;         
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: 1fr 1fr;
+    margin-top:10px;
+    margin-bottom:20px;
+    font-weight:450;
+    li:nth-child(odd){
+        grid-row:1;
+        color:rgb(0, 0, 0);
     }
-    ol:nth-of-type(1){
-        grid-column-start:2;
-    }
-    ol:nth-of-type(2){
-        grid-column-start:3;
-    }
-    ol:nth-of-type(3){
-        grid-column-start:3;
-    }
-    ol:nth-of-type(4){
-        grid-column-start:3;
+    li:nth-child(even){
+        font-weight:bolder;
     }
 }
 
+/* Section content (audio player) */
+section.veronica-primary {
+    grid-column: 1 / 2;  
+    grid-row: 2 / 5;    
+    max-width:300px; 
+    box-shadow:  0 0 5px rgba(0, 0, 0, .5);
+    img{
+        max-width: 150px;
+        max-height: 150px;
+        margin-left:25%;
+        margin-top:25%;
+        border-radius: 10%;
+    }
+    
+}
+
+/* Aside timeline */
 aside {
-    display: flex; 
+    grid-column: 2 / 3;  
+    grid-row: 4;         
+    display: flex;
     flex-direction: column;
     gap: 4.65rem;
-    position: relative;
-
 }
 
-/* dots in de aside */
+/* Program listing items (articles) */
+ol:nth-of-type(1) {
+    grid-column: 3;      
+    grid-row: 4;         
+}
+
+ol:nth-of-type(2),
+ol:nth-of-type(3),
+ol:nth-of-type(4) {
+    grid-column: 4;     
+    grid-row: 4;       
+}
+
+footer.footer{
+    grid-row:5;
+    grid-column:1;
+    background-color: #11436b;
+}
+
+/* Hidden content */
+.hidden {
+    display: none;
+}
+
+/* Aside time dots styling */
 aside > time::after {
     content: "--------";
     display: block;
@@ -52,11 +136,11 @@ aside > time::after {
     color: #292929;
 }
 
-
-article{
+/* Card styling */
+.cards {
     border-radius: 0.875em;
-    margin-bottom:9px;
-    margin-left:10%;
+    margin-bottom: 9px;
+    margin-left: 10%;
     max-width: 33em;
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
     display: grid;
@@ -66,11 +150,8 @@ article{
 
     header {
         grid-column: 2;
-        margin-right:3%;
-
-        h2, p {
-            margin-top:0.30em;
-        }
+        margin-right: 3%;
+        margin-top:10px;
     }
 
     img {
@@ -79,8 +160,8 @@ article{
         grid-column: 1;
         grid-row: 1;
         justify-self: center;
-        margin-top:1.25em;
-        border-radius:50%;
+        margin-top: 1.25em;
+        border-radius: 50%;
     }
 
     footer {
@@ -88,75 +169,69 @@ article{
         display: grid;
         grid-template-rows: 50px 50px;
         grid-template-columns: 1fr 100px;
-        
-        ul{
+
+        ul {
             list-style-type: none;
-            time{
-                margin-top:4em;
+            li {
+                margin-top: 1.3em;
             }
         }
-        a{
-            color:grey;
-            justify-self:right;
+        a {
+            color: grey;
+            justify-self: right;
             text-decoration: none;
-            margin-top:3em;
-            margin-right:0.75em;
-            grid-column-start:2;
+            margin-top: 3em;
+            margin-right: 0.75em;
+            grid-column-start: 2;
         }
     }
-    @media (max-width: 40em) {
-        margin-left:1%;
-    }
 }
 
-.veronica-secondary{
-    color:var(--brand-secondary);
+/* Button styles */
+.programma-button {
+    font-size: 1em;
+    margin-top: 5em;
+    margin-bottom: 1em;
 }
 
-.slam-primary{
-    color:var(--brand-primary);
-}
-
-.programma-button{
-    font-size:1em;
-    margin-top:5em;
-    margin-bottom:1em;
-}
-
+/* Audio player button */
 .audio-player {
-    width:20em;
+    width: 10em;
     margin: 20px;
     position: relative;
     background: #11436b;
     border-radius: 45px;
     border: none;
     cursor: pointer;
+    margin-top:15%;
+    margin-left:4.3em;
 }
 
-.audio-player:hover{
-color:aliceblue;
-background-color: rgb(42, 53, 204);
+.audio-player:hover {
+    color: aliceblue;
+    background-color: rgb(221, 41, 152);
+    transition-duration:.55s;
+    transition-timing-function: ease-in;
 }
 
-
-
-#play-pause-button:hover{
+/* Play/pause button */
+#play-pause-button:hover {
     transform: translateY(-4px);
 }
 
-#play-pause-button:active{
+#play-pause-button:active {
     transform: translateY(-1px);
 }
 
-
-#play-pause-button{
-    width:20rem;
+#play-pause-button {
+    width: 10rem;
 }
+
 .text {
     display: block;
     padding: 20px 25px;
     border-radius: 45px;
-    background: blue;
+    background: #0091FF;
     font-size: 1.5rem;
     font-weight: 500;
     color: black;
@@ -164,12 +239,9 @@ background-color: rgb(42, 53, 204);
     transition: transform ease 0.12s;
 }
 
-
-footer {
-    position: sticky;
+.button-highlight{
+    font-size:1.2em;
+    margin-top:25em;
+    margin-left:1em;
+    scale:1.4;
 }
-
-.hidden {
-    display: none;
-}
-

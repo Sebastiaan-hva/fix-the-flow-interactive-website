@@ -11,17 +11,56 @@
 
 <body class="background-neutral veronica-background-neutral">
 
+
 <header>
-    <nav class="primary veronica-primary"> 
-
-
-    </nav>
 </header>
 
+<main>
+    <nav> 
+        <ul class="nav-main">
+            <img src="./assets/assets veronica/veronica-logo.svg">
+            <li><a> Home</a></li>
+            <li><a> Radio</a></li>
+            <li><a> Ontdek</a></li>
+        </ul>
+    </nav>    
+
+    <ul class="nav-programma">
+        <li>Programmering</li>
+        <li>Dj's</li>
+        <li>Programma's</li>
+        <li>Playlists</li>
+        <li>Frequenties</li>
+    </ul>
+
+    <ul class="nav-dag">
+        <li>Maa </li><li>16</li>
+        <li>Din </li><li>17</li>
+        <li>Woe </li><li>18</li>
+        <li>Don </li><li>19</li>
+        <li>Vri </li><li>20</li>
+        <li>Zat </li><li>21</li>
+        <li>Zon </li><li>22</li>
+        <li>Maa </li><li>23</li>
+    </ul>
+
+
+<section class="veronica-primary">
+    <img src="./assets/assets veronica/radio-veronica.jpg">
+    <div class="audio-player">
+        <button id="play-pause-button" class="text veronica-secondary">Play Me</button>
+        <audio id="audio-player">
+            <source src="./assets/would that make you love me.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 
     
+    <button class="button-highlight " id="showContent"><img src="./assets/Mediahuis-Kleur.jpg"Open Programmas</button>
+    <button class="button-highlight  hidden" id="hideContent"><img src="./assets/Mediahuis-Kleur.jpg"Sluit Programmas</button>
+</section>
 
-<main>
+
 
 <aside>
     <!-- <time datetime="00:00">00:00</time>
@@ -52,7 +91,7 @@
 </aside>    
     
 <ol>
-    <article class="" style="--duration:3;">
+    <article class="cards" style="--duration:3;">
         <header>
             <h2>Goud van oud</h2>
             <p>Marissa draait elke werkdag van 09::00 tot 12:00 uur de muziek waar jij van houdt in Goud van Oud!</p>
@@ -60,14 +99,14 @@
         <img  src="./assets/assets veronica/marisa-heutink.jpg" alt="foto marisa heutink">
         <footer>
             <ul>
-                <li><time>9:00-12:00</time></li>
+                <li><time><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm0 11h6v1h-7v-9h1v8z"/></svg> 9:00-12:00</time></li>
                 <li>Marisa Heutink</li>
             </ul>
             <a class="veronica-secondary" href="info.html">Lees meer</a>
         </footer>
     </article>
 
-    <article class="" style="--duration:2;">
+    <article class="cards" style="--duration:2;">
         <header>
             <h2>Sander Hoogendoorn</h2>
             <p>De beste playlist tijdens de lunch</p>
@@ -82,7 +121,7 @@
         </footer>
     </article>
 
-    <article class="" style="--duration:2;">
+    <article class="cards" style="--duration:2;">
         <header>
             <h2>De Bonanza</h2>
             <p>De Bonanza met Rob Stenders is elke werkdag van 14:00 tot 16:00 uur te horen op Radio Veronica. Jij bepaalt welke muziek er wordt gedraaid. Vraag jouw favoriete platen aan via de gratis Radio Veronica app.</p>
@@ -101,7 +140,7 @@
 <!-- programmering slam    class="neutral slam-neutral" -->
 <ol><div id="hiddenId" class="hidden">
 
-    <article style="--duration:2;">
+    <article class="cards" style="--duration:2;">
         <header>
             <h2>Patrick Wolda</h2>
             <p>Programma van SLAM!</p>
@@ -116,7 +155,7 @@
         </footer>
     </article>
 
-    <article class="" style="--duration:2;">
+    <article class="cards" style="--duration:2;">
         <header>
             <h2>Hielke Boersma</h2>
             <p>De beste playlist tijdens de lunch</p>
@@ -131,7 +170,7 @@
         </footer>
     </article>
 
-    <article class="" style="--duration:2;">
+    <article class="cards" style="--duration:2;">
         <header>
             <h2>Housuh in de Pauzuh</h2>
             <p>Het is 12:00 uur. Even geen mail op kantoor of les op school. Gewoon even geen gedoe.
@@ -153,35 +192,25 @@
 </main>
 
 
-<button class="programma-button" id="showContent">Open Programma's</button>
-<button class="programma-button hidden" id="hideContent">Sluit Programma's</button>
 
 
 
 
+<!-- 4 verschillende programma's waarvan 3 disabled by default. -->
 
 <!-- programmering 100%nl-->
-<ol></ol>
+<!-- <ol></ol> -->
 
 <!-- programmering sublime-->
-<ol></ol>
+<!-- <ol></ol> -->
 
 
 <!-- mediaplayer -->
  <!-- accessability  -->
-<footer>
-    <section class="veronica-primary">
-        <div class="audio-player">
-            <button id="play-pause-button" class="text veronica-secondary">Play Me</button>
-            <audio id="audio-player">
-                <source src="./assets/would that make you love me.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-    </section>
+<footer class="footer">
+
 </footer>
 
 </body>
 </html>
 
-<!-- 4 verschillende programma's waarvan 3 disabled by default. -->
