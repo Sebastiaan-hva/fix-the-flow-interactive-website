@@ -168,3 +168,8 @@ background-color: rgb(42, 53, 204);
 footer {
     position: sticky;
 }
+
+.hidden {
+    display: none;
+}
+
