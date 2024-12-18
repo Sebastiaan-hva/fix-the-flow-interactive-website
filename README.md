@@ -21,12 +21,15 @@ Op basis van de feedback heb ik de timeline naar links verplaatst i.p.v tussen d
 
 ## States button
 (default)
+
 ![image](https://github.com/user-attachments/assets/96b244db-7f06-4871-a5d0-0dde3b062f54)
 
 (hover (er is ook een animatie) )
+
 ![image](https://github.com/user-attachments/assets/96ec52aa-ac58-4967-82f3-60890a425759)
 
 (on-click)
+
 ![image](https://github.com/user-attachments/assets/7b3ead29-d4d9-44ea-845a-48069c10948e)
 
 // hier een video toevoegen /
