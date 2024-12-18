@@ -7,6 +7,9 @@ Radio veronica programma pagina
 ## User Story
 Als gebruiker wil ik kunnen zien hoe ik de radio-player afspeel (en stop). Ik wil de radio terug kunnen spoelen en terug naar voren kunnen spoelen.
 
+## Feedback vorige sprint
+Op basis van de feedback heb ik de timeline naar links verplaatst i.p.v tussen de twee programma's. Verder heb ik de spacing van de cards wat aangepast.
+
 ## States site desktop
 
 (default)
