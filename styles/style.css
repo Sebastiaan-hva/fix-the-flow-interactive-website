@@ -118,7 +118,8 @@ footer.footer{
     grid-row:5;
     grid-column:1/5;
     background-color: #11436b;
-    margin-top:4em;
+    margin-top:0em;
+    z-index: 1;
 }
 
 /* Hidden content */
@@ -317,9 +318,22 @@ aside > time::after {
 
 
 @media (max-width: 500px) {
-    article img{
+    .cards{
+        grid-template-columns: 90px 1fr;
+        img{
         height: 70px;
         width: 70px;
+        }
+        footer{
+            margin-bottom:10px;
+        }
+        footer li{
+            font-size:0.75em;
+            
+        }
+        a{
+            font-size:0.9em;
+        }
     }
 }
 
