@@ -18,8 +18,18 @@ Op basis van de feedback heb ik de timeline naar links verplaatst i.p.v tussen d
 (na click mediahuis button)
 ![image](https://github.com/user-attachments/assets/c796e080-170f-403c-91a5-982fca857431)
 
+## States mobile
+
 
 ## States button
+
+![Schermafbeelding 2024-12-18 214901](https://github.com/user-attachments/assets/205f7e4c-1df1-4dd3-8d17-756d1d85a748)
+![Schermafbeelding 2024-12-18 214959](https://github.com/user-attachments/assets/0444720b-8a87-4b8c-bd07-5c7057eaa5d9)
+![Schermafbeelding 2024-12-18 215031](https://github.com/user-attachments/assets/6a7b5f68-66a0-4fb2-8ea7-3c19fbf019ed)
+
+https://github.com/user-attachments/assets/5bfa1d10-4112-4243-952e-7cdf0bf4058e
+
+
 (default)
 
 ![image](https://github.com/user-attachments/assets/96b244db-7f06-4871-a5d0-0dde3b062f54)
