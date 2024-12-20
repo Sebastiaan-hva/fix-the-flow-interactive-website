@@ -1,5 +1,6 @@
 
 Ontwerp en maak een interactieve website voor een opdrachtgever. 4e sprint met de opdracht voor het Mediahuis. Deze sprint heb ik gefocused op de interactie en op feedback en feedforward.
+
 https://sebastiaan-hva.github.io/fix-the-flow-interactive-website/
 
 # Radio veronica programma pagina
